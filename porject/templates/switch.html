@@ -1,0 +1,75 @@
+<h1 class="h3 mb-4 text-gray-800">창문제어</h1>
+<!-- Rounded switch -->
+<label class="switch">
+    <input type="checkbox", id = 'windowswitch'>
+    <span class="slider round"></span>
+</label>
+<script>
+    const windowswitch = document.getElementById('windowswitch');
+    
+    // 스위치 상태 변경 시 이벤트 핸들러 추가
+    windowswitch.addEventListener('change', function () {
+        if (this.checked) {
+            fetch('/servoon', {
+                method: 'GET'
+            })
+            
+        }
+        else{
+            fetch('/servooff', {
+                method: 'GET'
+            })
+        }
+    })
+</script>
+<h1 class="h3 mb-4 text-gray-800"></h1>
+
+<h1 class="h3 mb-4 text-gray-800">환풍기 제어</h1>
+<!-- Rounded switch -->
+<label class="switch">
+    <input type="checkbox", id = 'fanswitch'>
+    <span class="slider round"></span>
+</label>
+<script>
+    const fanswitch = document.getElementById('fanswitch');
+    
+    // 스위치 상태 변경 시 이벤트 핸들러 추가
+    fanswitch.addEventListener('change', function () {
+        if (this.checked) {
+            fetch('/fanon', {
+                method: 'GET'
+            })
+            
+        }
+        else{
+            fetch('/fanoff', {
+                method: 'GET'
+            })
+        }
+    })
+</script>
+<h1 class="h3 mb-4 text-gray-800"><
+<h1 class="h3 mb-4 text-gray-800">LED 제어</h1>
+<!-- Rounded switch -->
+<label class="switch">
+    <input type="checkbox", id = 'ledswitch'>
+    <span class="slider round"></span>
+</label>
+<script>
+    const ledswitch = document.getElementById('ledswitch');
+    
+    // 스위치 상태 변경 시 이벤트 핸들러 추가
+    ledswitch.addEventListener('change', function () {
+        if (this.checked) {
+            fetch('/light2', {
+                method: 'GET'
+            })
+            
+        }
+        else{
+            fetch('/lightoff', {
+                method: 'GET'
+            })
+        }
+    })
+</script>
